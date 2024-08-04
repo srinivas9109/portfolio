@@ -19,7 +19,7 @@ const Home = ({ AOS }) => {
             className="h-screen"
         >
             <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center z-10 relative justify-center h-screen px-4 md:flex-row sm:flex-row">
-                <div className="flex flex-col justify-center h-auto w-auto">
+                <div className="flex flex-col justify-center h-auto mb-28 sm:mb-0  w-auto">
                     <h2 className="mtext-4xl sm:text-7xl font-bold text-white" data-aos='fade-right'
                     >
                         {Bio.name
@@ -41,7 +41,7 @@ const Home = ({ AOS }) => {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center h-auto w-auto items-cente">
+                <div className="flex flex-col justify-center mb-10 sm:mb-0 h-auto w-auto items-cente">
                     <img
                         data-aos='fade-left'
                         src={HeroImage}
