@@ -18,7 +18,7 @@ const Home = ({ AOS }) => {
             name="home"
             className="h-screen"
         >
-            <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-center h-screen px-4 md:flex-row sm:flex-row">
+            <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center z-10 relative justify-center h-screen px-4 md:flex-row sm:flex-row">
                 <div className="flex flex-col justify-center h-auto w-auto">
                     <h2 className="mtext-4xl sm:text-7xl font-bold text-white" data-aos='fade-right'
                     >
