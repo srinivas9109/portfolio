@@ -15,9 +15,10 @@ const Projects = () => {
     setShowModel(true)
   }
   return (
+    <div className="w-full h-auto">
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white h-auto"
+      className="bg-gradient-to-b from-black to-gray-800 text-white "
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -26,19 +27,6 @@ const Projects = () => {
           </p>
           <p className="py-6">Check out some of my work right here</p>
         </div>
-
-        {/* <div className="card">
-            <DataTable value={projects}   onRowClick={rowSelectHandler} 
-                          className="p-1 bg-transparent border-2 rounded-md text-nowrap text-white focus:outline-none"
-            >
-                <Column field="name" header="Name" headerStyle={{background:"transparent",color:'white'}}></Column>
-                <Column field="company" header="Company" headerStyle={{background:"transparent",color:'white'}} ></Column>
-                <Column field="duration" header="Duration" headerStyle={{background:"transparent",color:'white'}} ></Column>
-
-                <Column  header="View More" body={ratingBodyTemplate}></Column>
-                
-            </DataTable>
-        </div> */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6  sm:px-0">
           {projects.map((project) => (
             <div key={project.id} className="shadow-md flex text-xs sm:text-lg flex-col justify-center items-center shadow-gray-600 rounded-lg">
@@ -62,6 +50,7 @@ const Projects = () => {
           </Dialog>
         </div>
       </div>
+    </div>
     </div>
   );
 };
