@@ -21,8 +21,8 @@ const Experience = () => {
                 </div>
                 <div className="max-w-7xl mx-auto w-full grid grid-cols-9 px-2">
                     {/* <!-- Stack 1 --> */}
-                    <div className="col-span-4 w-full h-full shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300">
-                        <div className="w-full text-white h-full bg-gray-700 rounded-md p-2 md:pl-4">
+                    <div className="col-span-4 w-full h-auto shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300">
+                        <div className="w-full text-white h-auto bg-gray-700 rounded-md p-2 md:pl-4">
                             <h1 className="  font-medium py-2 text-xs sm:text-xl">Programmer Analyst Trainee</h1>
                             <div className='flex flex-row  '>
                                 <p className="text-gray-100 sm:text-sm text-xs">Oct-2021</p>
@@ -31,7 +31,7 @@ const Experience = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=" relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div className=" relative col-span-1 w-full h-auto flex justify-center items-center">
                         <div className="h-full w-1 bg-gray-400"></div>
                         <Tooltip target=".custom-target-icon" />
 
@@ -56,8 +56,8 @@ const Experience = () => {
 
                         </div>
                     </div>
-                    <div className="col-span-4 w-full h-full  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300">
-                        <div className="w-full h-full text-white  bg-gray-700 rounded-md p-2 md:pl-4">
+                    <div className="col-span-4 w-full h-auto  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300">
+                        <div className="w-full h-auto text-white  bg-gray-700 rounded-md p-2 md:pl-4">
                             <h1 className="text-white text-xs sm:text-xl font-medium py-2">Programmer Analyst</h1>
                             <div className='flex flex-row  '>
                                 <p className="text-gray-100 sm:text-sm text-xs">Oct-2022</p>
@@ -67,8 +67,8 @@ const Experience = () => {
                     </div>
 
                     {/* <!-- Stack 3 --> */}
-                    <div className="col-span-4 w-full h-full  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300 ">
-                        <div className="w-full h-full text-white   bg-gray-700 rounded-md p-2 md:pl-4">
+                    <div className="col-span-4 w-full h-auto  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300 ">
+                        <div className="w-full h-auto text-white   bg-gray-700 rounded-md p-2 md:pl-4">
                             <h1 className="text-white  font-medium py-2 text-xs sm:text-xl">Associate</h1>
                             <div className='flex flex-row  '>
                                 <p className="text-gray-100 sm:text-sm text-xs">Nov-2023</p>
@@ -89,6 +89,7 @@ const Experience = () => {
                     <div className="col-span-4 w-full h-full"></div>
                 </div>
             </div>
+            
             <Projects />
 
         </div>
