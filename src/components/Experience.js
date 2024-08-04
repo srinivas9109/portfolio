@@ -4,12 +4,13 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { Tooltip } from 'primereact/tooltip';
 
 import "primereact/resources/themes/lara-light-cyan/theme.css";
+const Projects = React.lazy(() => import('./Projects'))
 
 const Experience = () => {
     return (
 
         <div className="w-full h-auto">
-        <div className="flex justify-center items-center" name='experience'>
+        <div className="flex flex-col justify-center items-center" name='experience'>
 
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className="pb-8 text-white">
@@ -88,6 +89,7 @@ const Experience = () => {
                     <div className="col-span-4 w-full h-full"></div>
                 </div>
             </div>
+            <Projects />
 
         </div>
         </div>

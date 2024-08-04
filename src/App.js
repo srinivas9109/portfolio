@@ -6,7 +6,6 @@ import { useGSAP } from '@gsap/react';
 const About = React.lazy(() => import('./components/About'))
 const Skills = React.lazy(() => import('./components/Skills'))
 const Experience = React.lazy(() => import('./components/Experience'))
-const Projects = React.lazy(() => import('./components/Projects'))
 const Contact = React.lazy(() => import('./components/Contact'))
 
 gsap.registerPlugin(useGSAP);
@@ -38,7 +37,6 @@ function App() {
               <About />
               <Skills />
               <Experience />
-              <Projects />
               <Contact />
             </Suspense>
           </div>

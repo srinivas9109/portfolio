@@ -45,7 +45,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-          <Dialog header={modelData.name} visible={showModel} className="w-60  sm:w-8/12" onHide={() => { if (!showModel) return; setShowModel(false); }}>
+          <Dialog header={modelData.name} visible={showModel} className="w-80 sm:w-8/12" onHide={() => { if (!showModel) return; setShowModel(false); }}>
             <ProjectDetails project={modelData} />
           </Dialog>
         </div>
