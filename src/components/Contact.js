@@ -62,7 +62,7 @@ const Contact = ({ AOS }) => {
             onSubmit={formSubmit}
           >
             <input
-              data-aos='fade-up'
+              data-aos='fade-down'
               value={name}
               type="text"
               name="name"
@@ -71,7 +71,7 @@ const Contact = ({ AOS }) => {
               onChange={(e) => setName(e.target.value)}
             />
             <input
-              data-aos='fade-up'
+              data-aos='fade-right'
               value={mail}
               type="email"
               name="email"
