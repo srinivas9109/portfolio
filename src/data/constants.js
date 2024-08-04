@@ -6,6 +6,7 @@ import rxjs from "../assests/rxjs.png";
 import redux from "../assests/redux.png";
 import mf from "../assests/mf.png";
 import api from "../assests/api.png";
+import git from "../assests/github.png";
 import eCommerce from "../assests/eCommerce.png";
 import jpmc from "../assests/jpMorgan.png";
 
@@ -16,7 +17,7 @@ export const Bio = {
     "React Developer",
   ],
   description:
-    `Full Stack developer with 3 years of hands-on experience in designing and implementing scalable web applications. Proficient
+    `Frontend developer with 3 years of hands-on experience in designing and implementing scalable web applications. Proficient
     in utilizing a diverse tech stack including JavaScript, Redux and React.js to deliver robust solutions. Skilled in micro frontends
     architecture, ensuring modular and maintainable codebases. Proven ability to collaborate effectively in cross-functional
     teams to meet project goals and deadlines. Known for delivering high-quality solutions. Strong problem-solving abilities and
@@ -79,6 +80,12 @@ export const techs = [
     src: api,
     title: "RESTFul api's",
     style: "shadow-blue-600",
+  },
+  {
+    id: 9,
+    src: git,
+    title: "GitHub",
+    style: "shadow-violet-600",
   }
 ];
 
