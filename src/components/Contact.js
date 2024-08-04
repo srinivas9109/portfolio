@@ -1,15 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 import { Toast } from 'primereact/toast';
 
-const Contact = () => {
+const Contact = ({ AOS }) => {
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
   const [subject, setSubject] = useState('');
   const toast = useRef(null);
   const form = useRef();
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: false, // Whether animation should happen only once
+    });
+    AOS.refresh(); // Refresh animations on scroll
+  }, [AOS]);
 
   const formSubmit = (e) => {
     e.preventDefault();
@@ -56,6 +62,7 @@ const Contact = () => {
             onSubmit={formSubmit}
           >
             <input
+              data-aos='fade-up'
               value={name}
               type="text"
               name="name"
@@ -64,6 +71,7 @@ const Contact = () => {
               onChange={(e) => setName(e.target.value)}
             />
             <input
+              data-aos='fade-up'
               value={mail}
               type="email"
               name="email"
@@ -73,6 +81,7 @@ const Contact = () => {
 
             />
             <textarea
+              data-aos='fade-up'
               value={subject}
               name="message"
               placeholder="Enter your message"

@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Bio } from '../data/constants'
 
-const About = () => {
+const About = ({AOS}) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: false, // Whether animation should happen only once
+    });
+    AOS.refresh(); // Refresh animations on scroll
+  }, [AOS]);
   return (
     <div
       name="about"
@@ -13,7 +20,7 @@ const About = () => {
             About
           </p>
         </div>
-        <p className="text-sm mt-10 sm:mt-20 sm:text-lg">
+        <p className="text-sm mt-10 sm:mt-20 sm:text-lg" data-aos='fade-up'>
           {Bio.description}
         </p>
       </div>

@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { techs } from "../data/constants"
 
-const Skills = () => {
+const Skills = ({ AOS }) => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: false, // Whether animation should happen only once
+        });
+        AOS.refresh(); // Refresh animations on scroll
+    }, [AOS]);
 
     return (
         <div
@@ -21,6 +28,7 @@ const Skills = () => {
                     <div className=" grid grid-cols-3 sm:grid-cols-5 gap-8 text-center items-center py-8 px-12 mt-2 w-full sm:w-screen sm:px-0">
                         {techs.map(({ id, src, title, style }) => (
                             <div
+                                data-aos='fade-up'
                                 key={id}
                                 className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
                             >

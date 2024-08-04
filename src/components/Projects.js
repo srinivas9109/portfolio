@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { projects } from "../data/constants";
 import { MdExpand } from "react-icons/md";
 
@@ -6,9 +6,16 @@ import { MdExpand } from "react-icons/md";
 import { Dialog } from 'primereact/dialog';
 import ProjectDetails from "./ProjectDetails";
 
-const Projects = () => {
+const Projects = ({AOS}) => {
   const [modelData, setModelData] = useState([]);
   const [showModel, setShowModel] = useState(false);
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, // Animation duration
+        once: false, // Whether animation should happen only once
+    });
+    AOS.refresh(); // Refresh animations on scroll
+}, [AOS]);
 
   const rowSelectHandler = (project) => {
     setModelData(project);
@@ -29,7 +36,7 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 px-6  sm:px-0">
           {projects.map((project) => (
-            <div key={project.id} className="shadow-md flex text-xs sm:text-lg flex-col justify-center items-center shadow-gray-600 rounded-lg">
+            <div key={project.id} className="shadow-md flex text-xs sm:text-lg flex-col justify-center items-center shadow-gray-600 rounded-lg" data-aos='fade-up'>
               <p>{project.name}</p>
               <img
                 src={project.src}

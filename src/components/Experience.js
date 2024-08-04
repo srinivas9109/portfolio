@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cognizant from "../assests/cognizant.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Tooltip } from 'primereact/tooltip';
@@ -6,7 +6,14 @@ import { Tooltip } from 'primereact/tooltip';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 const Projects = React.lazy(() => import('./Projects'))
 
-const Experience = () => {
+const Experience = ({AOS}) => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration
+          once: false, // Whether animation should happen only once
+        });
+        AOS.refresh(); // Refresh animations on scroll
+      }, [AOS]);
     return (
 
         <div className="w-full h-auto">
@@ -21,7 +28,7 @@ const Experience = () => {
                 </div>
                 <div className="max-w-7xl mx-auto w-full grid grid-cols-9 px-2">
                     {/* <!-- Stack 1 --> */}
-                    <div className="col-span-4 w-full h-auto shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300">
+                    <div className="col-span-4 w-full h-auto shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300" data-aos='fade-up'>
                         <div className="w-full text-white h-auto bg-gray-700 rounded-md p-2 md:pl-4">
                             <h1 className="  font-medium py-2 text-xs sm:text-xl">Programmer Analyst Trainee</h1>
                             <div className='flex flex-row  '>
@@ -56,7 +63,7 @@ const Experience = () => {
 
                         </div>
                     </div>
-                    <div className="col-span-4 w-full h-auto  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300">
+                    <div className="col-span-4 w-full h-auto  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300" data-aos='fade-up'>
                         <div className="w-full h-auto text-white  bg-gray-700 rounded-md p-2 md:pl-4">
                             <h1 className="text-white text-xs sm:text-xl font-medium py-2">Programmer Analyst</h1>
                             <div className='flex flex-row  '>
@@ -67,7 +74,7 @@ const Experience = () => {
                     </div>
 
                     {/* <!-- Stack 3 --> */}
-                    <div className="col-span-4 w-full h-auto  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300 ">
+                    <div className="col-span-4 w-full h-auto  shadow-md hover:scale-105 duration-500  rounded-lg shadow-gray-300 " data-aos='fade-up'>
                         <div className="w-full h-auto text-white   bg-gray-700 rounded-md p-2 md:pl-4">
                             <h1 className="text-white  font-medium py-2 text-xs sm:text-xl">Associate</h1>
                             <div className='flex flex-row  '>
@@ -90,7 +97,7 @@ const Experience = () => {
                 </div>
             </div>
             
-            <Projects />
+            <Projects AOS={AOS} />
 
         </div>
         </div>

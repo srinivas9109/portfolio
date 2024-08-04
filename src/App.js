@@ -1,17 +1,28 @@
 import React, { Suspense, useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+
 const About = React.lazy(() => import('./components/About'))
 const Skills = React.lazy(() => import('./components/Skills'))
 const Experience = React.lazy(() => import('./components/Experience'))
 const Contact = React.lazy(() => import('./components/Contact'))
 
-gsap.registerPlugin(useGSAP);
 
 function App() {
   const [showComponent, setShowComponent] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      AOS.refresh();
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,12 +43,12 @@ function App() {
           :
           <div>
             <Navbar />
-            <Home />
+            <Home  AOS={AOS}/>
             <Suspense fallback={<div >Loading</div>}>
-              <About />
-              <Skills />
-              <Experience />
-              <Contact />
+              <About AOS={AOS} />
+              <Skills AOS={AOS} />
+              <Experience AOS={AOS} />
+              <Contact AOS={AOS} />
             </Suspense>
           </div>
 
