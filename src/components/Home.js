@@ -43,12 +43,12 @@ const Home = ({ AOS }) => {
 
                 <div className="flex flex-col justify-center mb-10 sm:mb-0 h-auto w-auto items-cente">
                     <img
-                        data-aos='fade-left'
+                        data-aos='fade-down'
                         src={HeroImage}
                         alt="my profile"
                         className="rounded-3xl mx-auto my-5  w-2/3 md:w-1/2"
                     />
-                    <div className="flex flex-row justify-center h-auto w-auto space items-center text-white" data-aos='fade-left'>
+                    <div className="flex flex-row justify-center h-auto w-auto space items-center text-white" data-aos='fade-up'>
                         <a target={"_blank"} rel="noreferrer" href={Bio.linkedin}>
                             <FaLinkedin className="hover:scale-150 duration-200 m-5 w-5 h-5" />
                         </a>
