@@ -27,7 +27,7 @@ const Home = ({ AOS }) => {
                         }
                     </h2>
                     <p className="text-gray-500 py-1 max-w-md" data-aos='fade-up'>
-                        I have 3 years of experience building and desgining software.
+                        I have 3 years of experience building and designing software.
                         Currently, I love to work on web application using technologies like
                         React, Angular, Redux and RxJS.
                     </p>
