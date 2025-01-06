@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeroImage from "../assests/profile.jpg";
+import HeroImage from "../assests/profile.jpeg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaGitSquare } from "react-icons/fa";
