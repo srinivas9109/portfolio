@@ -9,6 +9,7 @@ import api from "../assests/api.png";
 import git from "../assests/github.png";
 import eCommerce from "../assests/eCommerce.png";
 import jpmc from "../assests/jpMorgan.png";
+import lwc from "../assests/lwc.png";
 
 export const Bio = {
   name: "Srinivas",
@@ -86,6 +87,12 @@ export const techs = [
     src: git,
     title: "GitHub",
     style: "shadow-violet-600",
+  },
+  {
+    id: 10,
+    src: lwc,
+    title: "LWC",
+    style: "shadow-blue-600",
   }
 ];
 
