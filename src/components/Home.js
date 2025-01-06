@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeroImage from "../assests/profile.jpeg";
+import HeroImage from "../assests/profile.jpg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaGitSquare } from "react-icons/fa";
@@ -27,9 +27,9 @@ const Home = ({ AOS }) => {
                         }
                     </h2>
                     <p className="text-gray-500 py-1 max-w-md" data-aos='fade-up'>
-                        I have 3 years of experience building and designing software.
+                        I have 3+ years of experience building and designing software.
                         Currently, I love to work on web application using technologies like
-                        React, Angular, Redux and RxJS.
+                        React, Angular,Lightning Web Components, Redux and RxJS.
                     </p>
 
                     <div className="flex flex-row">
